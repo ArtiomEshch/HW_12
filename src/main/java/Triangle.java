@@ -7,8 +7,16 @@ public class Triangle {
         this.c = c;
     }
 
-    public double getSquare() {
-        double halfPerimeter = this.getPerimeter() / 2;
+    public Triangle() {
+    }
+
+    public static double getSquare(Triangle triangle) {
+        if (triangle == null) throw new NullPointerException("значение null");
+        double a = triangle.a;
+        double b = triangle.b;
+        double c = triangle.c;
+        if (a + b == c || a+c == b || b+c==a) throw new NullPointerException();
+        double halfPerimeter = triangle.getPerimeter() / 2;
         return Math.sqrt(halfPerimeter * (halfPerimeter - a) * (halfPerimeter - b) * (halfPerimeter - c));
     }
 
