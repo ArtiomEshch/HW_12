@@ -15,7 +15,7 @@ public class Triangle {
         double a = triangle.a;
         double b = triangle.b;
         double c = triangle.c;
-        if (a + b == c || a+c == b || b+c==a) throw new NullPointerException();
+        if (a + b == c || a + c == b || b + c == a) throw new NullPointerException();
         double halfPerimeter = triangle.getPerimeter() / 2;
         return Math.sqrt(halfPerimeter * (halfPerimeter - a) * (halfPerimeter - b) * (halfPerimeter - c));
     }
