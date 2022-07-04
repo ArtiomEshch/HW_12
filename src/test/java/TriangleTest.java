@@ -11,13 +11,13 @@ class TriangleTest {
     @DisplayName("Triangle square calculation test")
 
     @ParameterizedTest
-    @MethodSource("method1DataProvider")
+    @MethodSource("getSquareDataProvider")
     public void getSquareTest(double a, double b, double c, double expected) {
         Triangle triangle = new Triangle(a, b, c);
         assertEquals(expected, Triangle.getSquare(triangle));
     }
 
-    static Stream<Arguments> method1DataProvider() {
+    static Stream<Arguments> getSquareDataProvider() {
         return Stream.of(
                 arguments(1.5, 2.5, 3, 1.8708286933869707),
                 arguments(465.1, 279.2, 279.3, 35952.15395869902),
