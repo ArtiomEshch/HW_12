@@ -1,3 +1,5 @@
+package utils;
+
 public class Triangle {
     private double a, b, c;
 
@@ -50,7 +52,7 @@ public class Triangle {
 
     @Override
     public String toString() {
-        return "Triangle{" +
+        return "utils.Triangle{" +
                 "a=" + a +
                 ", b=" + b +
                 ", c=" + c +
